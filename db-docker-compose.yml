@@ -1,0 +1,44 @@
+services:
+    # MariaDB
+    mariadb:
+        image: mariadb:latest
+        container_name: mariadb
+        restart: always
+        environment:
+            - MYSQL_ROOT_PASSWORD=${ROOT_PASSWORD}
+            - MYSQL_DATABASE=laravel
+            - MYSQL_USER=${USERNAME}
+            - MYSQL_PASSWORD=${PASSWORD}
+        volumes:
+            - ./volumes/mariadb:/var/lib/mysql
+        ports:
+            - 3306:3306
+        expose:
+            - 3306
+        networks:
+            - network_app
+
+    # phpMyAdmin
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin:latest
+        container_name: phpmyadmin
+        volumes:
+            - ./volumes/phpmyadmin:/sessions
+        ports:
+            - 8080:80
+        expose:
+            - 8080
+        environment:
+            - PMA_HOST=mariadb
+            - PMA_PORT=3306
+        depends_on:
+            - mariadb
+        restart: always
+        networks:
+            - network_app
+
+# Networks
+networks:
+    network_app:
+        driver: bridge
+        name: network_app

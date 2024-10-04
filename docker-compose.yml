@@ -1,0 +1,30 @@
+services:
+  app_php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: app_php
+    volumes:
+      - ./:/var/www
+    expose:
+      - "9000"
+    networks:
+      - network_app
+
+  app_nginx:
+    image: nginx:alpine
+    container_name: app_nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/var/www
+      - ./docker/nginx/conf.d:/etc/nginx/conf.d
+    depends_on:
+      - app_php
+    networks:
+      - network_app
+
+networks:
+  network_app:
+    name: network_app
+    external: true
