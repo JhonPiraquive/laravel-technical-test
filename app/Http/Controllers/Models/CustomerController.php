@@ -1,9 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Models;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\CustomerStoreRequest;
 use App\Http\Requests\CustomerUpdateRequest;
+use App\Http\Requests\Models\Customer\StoreRequest;
+use App\Http\Requests\Models\Customer\UpdateRequest;
 use App\Models\Customer;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
@@ -46,7 +49,7 @@ class CustomerController extends Controller
      * @param CustomerStoreRequest $request
      * @return RedirectResponse
      */
-    public function store(CustomerStoreRequest $request): RedirectResponse
+    public function store(StoreRequest $request): RedirectResponse
     {
         Customer::create($request->except(['_token', '_method']));
 
@@ -86,7 +89,7 @@ class CustomerController extends Controller
      * @param Customer $customer
      * @return RedirectResponse
      */
-    public function update(CustomerUpdateRequest $request, Customer $customer): RedirectResponse
+    public function update(UpdateRequest $request, Customer $customer): RedirectResponse
     {
         $customer->update($request->except(['_token', '_method']));
 

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Auth\PasswordResetLinkStoreRequest;
+use App\Http\Requests\Auth\ForgotPassword\SendLinkRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Password;
 use Illuminate\View\View;
@@ -14,12 +14,12 @@ use Illuminate\View\View;
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
  * @version October 04, 2024
  */
-class PasswordResetLinkController extends Controller
+class ForgotPasswordController extends Controller
 {
     /**
      * Display the password reset link request view.
      */
-    public function create(): View
+    public function index(): View
     {
         return view('auth.forgot-password');
     }
@@ -29,7 +29,7 @@ class PasswordResetLinkController extends Controller
      *
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function store(PasswordResetLinkStoreRequest $request): RedirectResponse
+    public function sendLink(SendLinkRequest $request): RedirectResponse
     {
         // We will send the password reset link to this user. Once we have attempted
         // to send the link, we will examine the response then see the message we

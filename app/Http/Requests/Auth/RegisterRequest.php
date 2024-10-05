@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Auth;
 
 use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
@@ -12,7 +12,7 @@ use Illuminate\Validation\Rules;
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
  * @version October 04, 2024
  */
-class RegisteredUserStoreRequest extends FormRequest
+class RegisterRequest extends FormRequest
 {
     /**
      * Get the validation rules that apply to the request.

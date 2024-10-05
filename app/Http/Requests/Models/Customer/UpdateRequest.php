@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Http\Requests\Auth;
+namespace App\Http\Requests\Models\Customer;
 
 use Illuminate\Foundation\Http\FormRequest;
 
 /**
- * Profile reset link store request validator
+ * Customer update request validator
  *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
  * @version October 04, 2024
  */
-class PasswordResetLinkStoreRequest extends FormRequest
+class UpdateRequest extends FormRequest
 {
     /**
      * Get the validation rules that apply to the request.
@@ -20,13 +20,10 @@ class PasswordResetLinkStoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'email' => [
-                'required',
-                'email',
-                'lowercase',
-                'email',
-                'max:255'
-            ],
+            'name' => 'required',
+            'email' => 'required|email|regex:/^[\w\.-]+@[\w\.-]+\.[\w\.-]+$/',
+            'phone' => 'required|regex:/^\+\d{1,3}\d{10}$/',
+            'address' => 'required',
         ];
     }
 }

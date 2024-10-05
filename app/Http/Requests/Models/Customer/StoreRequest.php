@@ -1,17 +1,16 @@
 <?php
 
-namespace App\Http\Requests\Auth;
+namespace App\Http\Requests\Models\Customer;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rules;
 
 /**
- * New password store request validator
+ * Customer store request validator
  *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
  * @version October 04, 2024
  */
-class NewPasswordStoreRequest extends FormRequest
+class StoreRequest extends FormRequest
 {
     /**
      * Get the validation rules that apply to the request.
@@ -21,9 +20,10 @@ class NewPasswordStoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'token' => ['required'],
-            'email' => ['required', 'email'],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'name' => 'required',
+            'email' => 'required|email|regex:/^[\w\.-]+@[\w\.-]+\.[\w\.-]+$/',
+            'phone' => 'required|regex:/^\+\d{1,3}\d{10}$/',
+            'address' => 'required',
         ];
     }
 }

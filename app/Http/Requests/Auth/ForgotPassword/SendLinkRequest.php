@@ -1,35 +1,31 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Auth\ForgotPassword;
 
-use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rule;
 
 /**
- * Profile update request validator
+ * User reset link store request validator
  *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
  * @version October 04, 2024
  */
-class ProfileUpdateRequest extends FormRequest
+class SendLinkRequest extends FormRequest
 {
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array<string, \Illuminate\Contracts\Validation\Rule|array|string>
+     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
     public function rules(): array
     {
         return [
-            'name' => ['required', 'string', 'max:255'],
             'email' => [
                 'required',
-                'string',
+                'email',
                 'lowercase',
                 'email',
-                'max:255',
-                Rule::unique(User::class)->ignore($this->user()->id),
+                'max:255'
             ],
         ];
     }
