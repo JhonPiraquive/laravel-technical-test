@@ -8,8 +8,10 @@ use Illuminate\Validation\Rules\Password;
 /**
  * Update password request validator
  *
+ * This class handles the validation rules for updating a user's password.
+ *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
- * @version October 04, 2024
+ * @version October 05, 2024
  */
 class UpdatePasswordRequest extends FormRequest
 {

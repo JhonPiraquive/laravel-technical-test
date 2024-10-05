@@ -7,8 +7,11 @@ use Illuminate\Foundation\Http\FormRequest;
 /**
  * User reset link store request validator
  *
+ * This class handles the validation rules for sending a password reset link
+ * to the user via email.
+ *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
- * @version October 04, 2024
+ * @version October 05, 2024
  */
 class SendLinkRequest extends FormRequest
 {

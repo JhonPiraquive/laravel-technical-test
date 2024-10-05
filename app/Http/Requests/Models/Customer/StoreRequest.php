@@ -7,8 +7,10 @@ use Illuminate\Foundation\Http\FormRequest;
 /**
  * Customer store request validator
  *
+ * This class handles the validation rules for storing customer data.
+ *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
- * @version October 04, 2024
+ * @version October 05, 2024
  */
 class StoreRequest extends FormRequest
 {

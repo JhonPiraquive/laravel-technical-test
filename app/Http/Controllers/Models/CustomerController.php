@@ -14,13 +14,16 @@ use Illuminate\Http\RedirectResponse;
 /**
  * Handle Customers requests and logic
  *
+ * This controller provides methods for managing customer data,
+ * including creating, updating, viewing, and deleting customers.
+ *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
  * @version October 04, 2024
  */
 class CustomerController extends Controller
 {
     /**
-     * Display the customer's main view
+     * Display the customer's main view.
      *
      * @return View
      */
@@ -34,7 +37,7 @@ class CustomerController extends Controller
     }
 
     /**
-     * Display the customer's create view
+     * Display the customer's create view.
      *
      * @return View
      */
@@ -44,10 +47,10 @@ class CustomerController extends Controller
     }
 
     /**
-     * Store the given customer
+     * Store the given customer.
      *
-     * @param CustomerStoreRequest $request
-     * @return RedirectResponse
+     * @param StoreRequest $request The request containing customer data.
+     * @return RedirectResponse Redirects to the customer index route.
      */
     public function store(StoreRequest $request): RedirectResponse
     {
@@ -57,9 +60,9 @@ class CustomerController extends Controller
     }
 
     /**
-     * Display the customer's edit view
+     * Display the customer's edit view.
      *
-     * @param Customer $customer
+     * @param Customer $customer The customer instance to edit.
      * @return View
      */
     public function edit(Customer $customer): View
@@ -70,9 +73,9 @@ class CustomerController extends Controller
     }
 
     /**
-     * Display the customer's edit view
+     * Display the customer's view.
      *
-     * @param Customer $customer
+     * @param Customer $customer The customer instance to view.
      * @return View
      */
     public function view(Customer $customer): View
@@ -83,11 +86,11 @@ class CustomerController extends Controller
     }
 
     /**
-     * Update the given customer
+     * Update the given customer.
      *
-     * @param CustomerUpdateRequest $request
-     * @param Customer $customer
-     * @return RedirectResponse
+     * @param UpdateRequest $request The request containing updated customer data.
+     * @param Customer $customer The customer instance to update.
+     * @return RedirectResponse Redirects back with a status message.
      */
     public function update(UpdateRequest $request, Customer $customer): RedirectResponse
     {
@@ -97,10 +100,10 @@ class CustomerController extends Controller
     }
 
     /**
-     * Delete the given customer
+     * Delete the given customer.
      *
-     * @param Customer $customer
-     * @return RedirectResponse
+     * @param Customer $customer The customer instance to delete.
+     * @return RedirectResponse Redirects to the customer index route.
      */
     public function delete(Customer $customer): RedirectResponse
     {

@@ -13,10 +13,22 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\View\View;
 
+/**
+ * Class AuthController
+ *
+ * Handles user authentication, including login and registration.
+ * This controller provides methods to display login and registration forms,
+ * process authentication requests, and manage user sessions.
+ *
+ * @author Alejandro Piraquive <alejandro5.6@icloud.com>
+ * @version October 05, 2024
+ */
 class AuthController extends Controller
 {
     /**
      * Display the login view.
+     *
+     * @return View
      */
     public function index(): View
     {
@@ -25,6 +37,9 @@ class AuthController extends Controller
 
     /**
      * Handle an incoming authentication request.
+     *
+     * @param LoginRequest $request The request containing user credentials.
+     * @return RedirectResponse Redirects the user to the intended page after authentication.
      */
     public function login(LoginRequest $request): RedirectResponse
     {
@@ -37,6 +52,9 @@ class AuthController extends Controller
 
     /**
      * Destroy an authenticated session.
+     *
+     * @param Request $request The incoming request instance.
+     * @return RedirectResponse Redirects the user to the home page after logout.
      */
     public function logout(Request $request): RedirectResponse
     {
@@ -51,6 +69,8 @@ class AuthController extends Controller
 
     /**
      * Display the registration view.
+     *
+     * @return View
      */
     public function register(): View
     {
@@ -60,7 +80,9 @@ class AuthController extends Controller
     /**
      * Handle an incoming registration request.
      *
+     * @param RegisterRequest $request The request containing user registration data.
      * @throws \Illuminate\Validation\ValidationException
+     * @return RedirectResponse Redirects the user to the dashboard after successful registration.
      */
     public function store(RegisterRequest $request): RedirectResponse
     {

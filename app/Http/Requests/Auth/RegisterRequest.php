@@ -9,8 +9,10 @@ use Illuminate\Validation\Rules;
 /**
  * Registered user store request validator
  *
+ * This class handles the validation rules for registering a new user.
+ *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
- * @version October 04, 2024
+ * @version October 05, 2024
  */
 class RegisterRequest extends FormRequest
 {

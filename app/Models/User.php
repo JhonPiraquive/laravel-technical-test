@@ -7,6 +7,14 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
+/**
+ * A user of the application
+ *
+ * This class represents a user, including authentication and notification functionalities.
+ *
+ * @author Alejandro Piraquive <alejandro5.6@icloud.com>
+ * @version October 05, 2024
+ */
 class User extends Authenticatable
 {
     use HasFactory, Notifiable, SoftDeletes;

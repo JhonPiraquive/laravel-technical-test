@@ -13,7 +13,10 @@ use Illuminate\Support\Str;
 use Illuminate\View\View;
 
 /**
- * Handle new passwrod requests and logic
+ * Handle new password requests and logic
+ *
+ * This controller provides methods for displaying the password reset view
+ * and handling the logic for resetting a user's password.
  *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
  * @version October 04, 2024
@@ -22,6 +25,9 @@ class ResetPasswordController extends Controller
 {
     /**
      * Display the password reset view.
+     *
+     * @param Request $request The incoming request instance.
+     * @return View
      */
     public function index(Request $request): View
     {
@@ -31,7 +37,9 @@ class ResetPasswordController extends Controller
     /**
      * Handle an incoming new password request.
      *
+     * @param ResetRequest $request The request containing the password reset data.
      * @throws \Illuminate\Validation\ValidationException
+     * @return RedirectResponse Redirects the user to the login page or back with an error message.
      */
     public function reset(ResetRequest $request): RedirectResponse
     {

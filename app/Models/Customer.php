@@ -9,8 +9,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * A customer of the site
  *
+ * This class represents a customer and their associated data in the application.
+ *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
- * @version October 04, 2024
+ * @version October 05, 2024
  */
 class Customer extends Model
 {
