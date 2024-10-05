@@ -6,12 +6,11 @@ services:
         restart: always
         environment:
             - MYSQL_ROOT_PASSWORD=${ROOT_PASSWORD}
-            - MYSQL_DATABASE=laravel
             - MYSQL_USER=${USERNAME}
             - MYSQL_PASSWORD=${PASSWORD}
         volumes:
             - ./volumes/mariadb:/var/lib/mysql
-            - ./docker/mariadb/init.sh:/docker-entrypoint-initdb.d/mysql-init.sh
+            - ./docker/mariadb/init.sh:/docker-entrypoint-initdb.d/init.sh
         ports:
             - 3306:3306
         expose:
