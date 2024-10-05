@@ -13,21 +13,30 @@ return [
 
     'attributes' => [
         'confirm_password' => 'Confirm Password',
-        'email' => 'E-Mail Address',
-        'name' => 'name',
+        'email' => 'Email Address',
+        'name' => 'Name',
         'password' => 'Password',
-        'remember_me' => 'Remember me',
+        'remember_me' => 'Remember Me',
         'current_password' => 'Current Password',
-        'new_password' => 'New password',
+        'new_password' => 'New Password',
         'phone' => 'Phone',
         'address' => 'Address',
-        'no_data' => 'No Data'
+        'no_data' => 'No Information'
     ],
     'customer' => [
-        'response' => [
-            'save' => 'Saved'
+        'buttons' => [
+            'delete' => 'Delete',
+            'save' => 'Save'
+        ],
+        'content' => [
+            'update_title' => 'Update Customer',
+            'delete' => 'Remember that by deleting this record you will not be able to recover it.',
+            'store_title' => 'Create Customer'
         ],
         'title' => 'Customers',
+        'table' => [
+            'options' => 'Options'
+        ]
     ],
     'dashboard' => [
         'title' => 'Dashboard',
@@ -37,15 +46,15 @@ return [
     ],
     'forgot_password' => [
         'buttons' => [
-            'forgot' => 'Email Password Reset Link',
+            'forgot' => 'Send Link'
         ],
         'content' => [
-            'text1' => 'Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.'
+            'text1' => 'Forgot your password? No problem. Just let us know your email address and we will send you a link to reset your password, where you can choose a new one.'
         ]
     ],
     'login' => [
         'buttons' => [
-            'login' => 'Log in',
+            'login' => 'Log In',
         ],
         'default' => [
             'password' => 'Default Password',
@@ -61,14 +70,14 @@ return [
             'logout' => 'Log Out'
         ]
     ],
-    'profile' => [
+    'user' => [
         'buttons' => [
             'save' => 'Save'
         ],
         'content' => [
             'information' => 'Profile Information',
-            'text' => "Update your account's profile information and email address.",
-            'text2' => 'Ensure your account is using a long, random password to stay secure.',
+            'text' => 'Update your account profile information and email address.',
+            'text2' => 'Make sure your account is using a long, random password to keep it secure.',
             'update_password' => 'Update Password',
         ],
         'response' => [

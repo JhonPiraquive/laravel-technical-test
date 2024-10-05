@@ -70,7 +70,7 @@ return [
             'logout' => 'Salir'
         ]
     ],
-    'profile' => [
+    'user' => [
         'buttons' => [
             'save' => 'Guardar'
         ],
