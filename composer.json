@@ -18,7 +18,7 @@
         "laravel/sail": "^1.26",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.0",
-        "pestphp/pest-plugin-laravel": "^3.0"
+        "phpunit/phpunit": "^11.3"
     },
     "autoload": {
         "psr-4": {
@@ -59,7 +59,6 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "allow-plugins": {
-            "pestphp/pest-plugin": true,
             "php-http/discovery": true
         }
     },
