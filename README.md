@@ -87,6 +87,8 @@ $ Wait a couple of seconds and go to http://localhost
 You can execute the tests with
 
 ```bash
+$ php artisan config:cache
+$ composer dump-autoload
 $ php artisan test
 ```
 
