@@ -4,9 +4,9 @@ namespace Tests\Feature\Models;
 
 use App\Models\Customer;
 use App\Models\User;
-use Tests\TestCase;
-use PHPUnit\Framework\Attributes\Test;
 use Faker\Factory as Faker;
+use PHPUnit\Framework\Attributes\Test;
+use Tests\TestCase;
 
 /**
  * Class CustomerTest
@@ -15,6 +15,7 @@ use Faker\Factory as Faker;
  * creating, updating, viewing, and deleting customers.
  *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
+ *
  * @version October 05, 2024
  */
 class CustomerTest extends TestCase
@@ -23,8 +24,6 @@ class CustomerTest extends TestCase
      * Test that the customer index page is displayed successfully.
      *
      * This method verifies that the authenticated user can access the customer index page.
-     *
-     * @return void
      */
     #[Test]
     public function customer_page_is_displayed(): void
@@ -46,8 +45,6 @@ class CustomerTest extends TestCase
      * Test that a customer can be created.
      *
      * This method creates a customer and checks that the customer creation redirects to the correct route.
-     *
-     * @return void
      */
     #[Test]
     public function customer_can_be_created(): void
@@ -72,8 +69,6 @@ class CustomerTest extends TestCase
      * Test that the customer edit page is displayed successfully.
      *
      * This method verifies that the authenticated user can access the customer edit page.
-     *
-     * @return void
      */
     #[Test]
     public function customer_edit_page_is_displayed(): void
@@ -98,8 +93,6 @@ class CustomerTest extends TestCase
      * Test that a customer can be updated.
      *
      * This method updates customer information and checks that the session contains the correct status and the user is redirected.
-     *
-     * @return void
      */
     #[Test]
     public function customer_can_be_updated(): void
@@ -130,8 +123,6 @@ class CustomerTest extends TestCase
      * Test that the customer view page is displayed successfully.
      *
      * This method verifies that the authenticated user can access the customer view page.
-     *
-     * @return void
      */
     #[Test]
     public function customer_view_page_is_displayed(): void
@@ -156,8 +147,6 @@ class CustomerTest extends TestCase
      * Test that a customer can be deleted.
      *
      * This method deletes a customer and checks that the user is redirected to the customer index page.
-     *
-     * @return void
      */
     #[Test]
     public function customer_can_be_deleted(): void

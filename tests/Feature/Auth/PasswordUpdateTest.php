@@ -4,8 +4,8 @@ namespace Tests\Feature\Auth;
 
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
-use Tests\TestCase;
 use PHPUnit\Framework\Attributes\Test;
+use Tests\TestCase;
 
 /**
  * Class PasswordUpdateTest
@@ -14,11 +14,13 @@ use PHPUnit\Framework\Attributes\Test;
  * the current password and ensuring the new password is correctly updated.
  *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
+ *
  * @version October 05, 2024
  */
 class PasswordUpdateTest extends TestCase
 {
     const PATH_USER = '/user';
+
     const PATH_PASSWORD = '/password';
 
     /**
@@ -26,8 +28,6 @@ class PasswordUpdateTest extends TestCase
      *
      * This method simulates a password update request, where the current password is verified and
      * the new password is applied. It asserts that no errors occur during the process and that the password is updated successfully.
-     *
-     * @return void
      */
     #[Test]
     public function password_can_be_updated(): void

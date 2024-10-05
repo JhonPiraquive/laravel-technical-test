@@ -11,6 +11,7 @@ use Illuminate\Foundation\Http\FormRequest;
  * to the user via email.
  *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
+ *
  * @version October 05, 2024
  */
 class SendLinkRequest extends FormRequest
@@ -28,7 +29,7 @@ class SendLinkRequest extends FormRequest
                 'email',
                 'lowercase',
                 'email',
-                'max:255'
+                'max:255',
             ],
         ];
     }

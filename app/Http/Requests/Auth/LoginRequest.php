@@ -15,6 +15,7 @@ use Illuminate\Validation\ValidationException;
  * This class handles the validation and authentication logic for user login requests.
  *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
+ *
  * @version October 05, 2024
  */
 class LoginRequest extends FormRequest

@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Hash;
  * Feed database with user information
  *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
+ *
  * @version October 03, 2024
  */
 class UserSeeder extends Seeder
@@ -22,7 +23,7 @@ class UserSeeder extends Seeder
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
-            'password' => Hash::make('12345678')
+            'password' => Hash::make('12345678'),
         ]);
     }
 }

@@ -3,8 +3,6 @@
 namespace App\Http\Controllers\Models;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\CustomerStoreRequest;
-use App\Http\Requests\CustomerUpdateRequest;
 use App\Http\Requests\Models\Customer\StoreRequest;
 use App\Http\Requests\Models\Customer\UpdateRequest;
 use App\Models\Customer;
@@ -18,38 +16,35 @@ use Illuminate\Http\RedirectResponse;
  * including creating, updating, viewing, and deleting customers.
  *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
+ *
  * @version October 04, 2024
  */
 class CustomerController extends Controller
 {
     /**
      * Display the customer's main view.
-     *
-     * @return View
      */
     public function index(): View
     {
         $customers = Customer::paginate(5, ['*'], 'customers');
 
         return view('customer.index', [
-            'customers' => $customers
+            'customers' => $customers,
         ]);
     }
 
     /**
      * Display the customer's create view.
-     *
-     * @return View
      */
     public function create(): View
     {
-        return view('customer.create', ['customer' => new Customer()]);
+        return view('customer.create', ['customer' => new Customer]);
     }
 
     /**
      * Store the given customer.
      *
-     * @param StoreRequest $request The request containing customer data.
+     * @param  StoreRequest  $request  The request containing customer data.
      * @return RedirectResponse Redirects to the customer index route.
      */
     public function store(StoreRequest $request): RedirectResponse
@@ -62,34 +57,32 @@ class CustomerController extends Controller
     /**
      * Display the customer's edit view.
      *
-     * @param Customer $customer The customer instance to edit.
-     * @return View
+     * @param  Customer  $customer  The customer instance to edit.
      */
     public function edit(Customer $customer): View
     {
         return view('customer.edit', [
-            'customer' => $customer
+            'customer' => $customer,
         ]);
     }
 
     /**
      * Display the customer's view.
      *
-     * @param Customer $customer The customer instance to view.
-     * @return View
+     * @param  Customer  $customer  The customer instance to view.
      */
     public function view(Customer $customer): View
     {
         return view('customer.view', [
-            'customer' => $customer
+            'customer' => $customer,
         ]);
     }
 
     /**
      * Update the given customer.
      *
-     * @param UpdateRequest $request The request containing updated customer data.
-     * @param Customer $customer The customer instance to update.
+     * @param  UpdateRequest  $request  The request containing updated customer data.
+     * @param  Customer  $customer  The customer instance to update.
      * @return RedirectResponse Redirects back with a status message.
      */
     public function update(UpdateRequest $request, Customer $customer): RedirectResponse
@@ -102,7 +95,7 @@ class CustomerController extends Controller
     /**
      * Delete the given customer.
      *
-     * @param Customer $customer The customer instance to delete.
+     * @param  Customer  $customer  The customer instance to delete.
      * @return RedirectResponse Redirects to the customer index route.
      */
     public function delete(Customer $customer): RedirectResponse

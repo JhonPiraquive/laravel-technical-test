@@ -11,6 +11,7 @@ use Illuminate\Validation\Rules\Password;
  * This class handles the validation rules for updating a user's password.
  *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
+ *
  * @version October 05, 2024
  */
 class UpdatePasswordRequest extends FormRequest
@@ -25,12 +26,12 @@ class UpdatePasswordRequest extends FormRequest
         return [
             'current_password' => [
                 'required',
-                'current_password'
+                'current_password',
             ],
             'password' => [
                 'required',
                 Password::defaults(),
-                'confirmed'
+                'confirmed',
             ],
         ];
     }

@@ -20,14 +20,12 @@ class CustomerFactory extends Factory
             'name' => $this->faker->name,
             'email' => $this->faker->email,
             'phone' => $this->generatePhoneNumber(),
-            'address' => $this->faker->address
+            'address' => $this->faker->address,
         ];
     }
 
     /**
      * Generate an american phone number
-     *
-     * @return string
      */
     protected function generatePhoneNumber(): string
     {
@@ -37,6 +35,6 @@ class CustomerFactory extends Factory
         $numberPart1 = $this->faker->numberBetween(100, 999);
         $numberPart2 = $this->faker->numberBetween(1000, 9999);
 
-        return $countryCode . $areaCode . $numberPart1 . $numberPart2;
+        return $countryCode.$areaCode.$numberPart1.$numberPart2;
     }
 }

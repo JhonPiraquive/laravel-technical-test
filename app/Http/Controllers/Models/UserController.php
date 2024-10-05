@@ -6,8 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Models\User\UpdatePasswordRequest;
 use App\Http\Requests\Models\User\UpdateRequest;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 
@@ -18,6 +18,7 @@ use Illuminate\View\View;
  * including updating passwords and user details.
  *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
+ *
  * @version October 05, 2024
  */
 class UserController extends Controller
@@ -25,7 +26,7 @@ class UserController extends Controller
     /**
      * Update the user's password.
      *
-     * @param UpdatePasswordRequest $request The request containing the new password.
+     * @param  UpdatePasswordRequest  $request  The request containing the new password.
      * @return RedirectResponse Redirects back with a status message.
      */
     public function updatePassword(UpdatePasswordRequest $request): RedirectResponse
@@ -40,7 +41,7 @@ class UserController extends Controller
     /**
      * Display the user form.
      *
-     * @param Request $request The incoming request.
+     * @param  Request  $request  The incoming request.
      * @return View The view for editing user information.
      */
     public function edit(Request $request): View
@@ -53,7 +54,7 @@ class UserController extends Controller
     /**
      * Update the user information.
      *
-     * @param UpdateRequest $request The request containing user data.
+     * @param  UpdateRequest  $request  The request containing user data.
      * @return RedirectResponse Redirects to the user edit route with a status message.
      */
     public function update(UpdateRequest $request): RedirectResponse

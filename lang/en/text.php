@@ -21,36 +21,36 @@ return [
         'new_password' => 'New Password',
         'phone' => 'Phone',
         'address' => 'Address',
-        'no_data' => 'No Information'
+        'no_data' => 'No Information',
     ],
     'customer' => [
         'buttons' => [
             'delete' => 'Delete',
-            'save' => 'Save'
+            'save' => 'Save',
         ],
         'content' => [
             'update_title' => 'Update Customer',
             'delete' => 'Remember that by deleting this record you will not be able to recover it.',
-            'store_title' => 'Create Customer'
+            'store_title' => 'Create Customer',
         ],
         'title' => 'Customers',
         'table' => [
-            'options' => 'Options'
-        ]
+            'options' => 'Options',
+        ],
     ],
     'dashboard' => [
         'title' => 'Dashboard',
         'content' => [
-            'welcome' => 'Welcome!'
-        ]
+            'welcome' => 'Welcome!',
+        ],
     ],
     'forgot_password' => [
         'buttons' => [
-            'forgot' => 'Send Link'
+            'forgot' => 'Send Link',
         ],
         'content' => [
-            'text1' => 'Forgot your password? No problem. Just let us know your email address and we will send you a link to reset your password, where you can choose a new one.'
-        ]
+            'text1' => 'Forgot your password? No problem. Just let us know your email address and we will send you a link to reset your password, where you can choose a new one.',
+        ],
     ],
     'login' => [
         'buttons' => [
@@ -62,17 +62,17 @@ return [
         ],
         'links' => [
             'forgot_password' => 'Forgot your password?',
-            'register' => 'New User?'
-        ]
+            'register' => 'New User?',
+        ],
     ],
     'navigation' => [
         'buttons' => [
-            'logout' => 'Log Out'
-        ]
+            'logout' => 'Log Out',
+        ],
     ],
     'user' => [
         'buttons' => [
-            'save' => 'Save'
+            'save' => 'Save',
         ],
         'content' => [
             'information' => 'Profile Information',
@@ -81,7 +81,7 @@ return [
             'update_password' => 'Update Password',
         ],
         'response' => [
-            'save' => 'Saved'
+            'save' => 'Saved',
         ],
         'title' => 'Profile',
     ],
@@ -90,12 +90,12 @@ return [
             'register' => 'Register',
         ],
         'links' => [
-            'already_registered' => 'Already registered?'
-        ]
+            'already_registered' => 'Already registered?',
+        ],
     ],
     'reset_password' => [
         'buttons' => [
-            'reset' => 'Reset Password'
-        ]
-    ]
+            'reset' => 'Reset Password',
+        ],
+    ],
 ];

@@ -3,8 +3,8 @@
 namespace Tests\Feature\Auth;
 
 use App\Models\User;
-use Tests\TestCase;
 use PHPUnit\Framework\Attributes\Test;
+use Tests\TestCase;
 
 /**
  * Class AuthenticationTest
@@ -13,6 +13,7 @@ use PHPUnit\Framework\Attributes\Test;
  * successful and failed login attempts, and user logout functionality.
  *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
+ *
  * @version October 05, 2024
  */
 class AuthenticationTest extends TestCase
@@ -23,8 +24,6 @@ class AuthenticationTest extends TestCase
      * Test that the login screen can be rendered.
      *
      * This method checks that the login page is accessible and returns a 200 status code.
-     *
-     * @return void
      */
     #[Test]
     public function login_screen_can_be_rendered(): void
@@ -41,8 +40,6 @@ class AuthenticationTest extends TestCase
      *
      * This method simulates a login request with valid credentials and checks that the user is authenticated
      * and redirected to the dashboard.
-     *
-     * @return void
      */
     #[Test]
     public function users_can_authenticate_using_the_login_screen(): void
@@ -67,8 +64,6 @@ class AuthenticationTest extends TestCase
      * Test that users cannot authenticate with an invalid password.
      *
      * This method simulates a login attempt with a wrong password and checks that the user is not authenticated.
-     *
-     * @return void
      */
     #[Test]
     public function users_can_not_authenticate_with_invalid_password(): void
@@ -90,8 +85,6 @@ class AuthenticationTest extends TestCase
      * Test that users can log out.
      *
      * This method simulates a logout request and checks that the user is logged out and redirected to the home page.
-     *
-     * @return void
      */
     #[Test]
     public function users_can_logout(): void

@@ -3,9 +3,9 @@
 namespace Tests\Feature\Models;
 
 use App\Models\User;
-use Tests\TestCase;
-use PHPUnit\Framework\Attributes\Test;
 use Faker\Factory as Faker;
+use PHPUnit\Framework\Attributes\Test;
+use Tests\TestCase;
 
 /**
  * Class UserTest
@@ -15,6 +15,7 @@ use Faker\Factory as Faker;
  * and that the email verification status remains unchanged when the email is not updated.
  *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
+ *
  * @version October 05, 2024
  */
 class UserTest extends TestCase
@@ -26,8 +27,6 @@ class UserTest extends TestCase
      *
      * This method verifies that the authenticated user can access the user page without errors.
      * It also checks that the environment is properly set to the testing database.
-     *
-     * @return void
      */
     #[Test]
     public function user_page_is_displayed(): void
@@ -49,8 +48,6 @@ class UserTest extends TestCase
      *
      * This method uses Faker to generate random user data for the name and email.
      * It verifies that the user information is successfully updated and the user is redirected without errors.
-     *
-     * @return void
      */
     #[Test]
     public function user_information_can_be_updated(): void
@@ -68,7 +65,7 @@ class UserTest extends TestCase
             ->actingAs($user)
             ->patch(self::PATH_USER, [
                 'name' => $name,
-                'email' => $email
+                'email' => $email,
             ]);
 
         // Assert there are no validation errors and the user is redirected
@@ -88,8 +85,6 @@ class UserTest extends TestCase
      * Test that the email verification status remains unchanged if the email is not updated.
      *
      * This method checks that the email verification status is not reset when the email address stays the same after an update.
-     *
-     * @return void
      */
     #[Test]
     public function email_verification_status_is_unchanged_when_the_email_address_is_unchanged(): void

@@ -2,9 +2,9 @@
 
 namespace Tests\Feature\Auth;
 
-use Tests\TestCase;
-use PHPUnit\Framework\Attributes\Test;
 use Faker\Factory as Faker;
+use PHPUnit\Framework\Attributes\Test;
+use Tests\TestCase;
 
 /**
  * Class RegistrationTest
@@ -13,6 +13,7 @@ use Faker\Factory as Faker;
  * rendering the registration screen and allowing new users to register.
  *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
+ *
  * @version October 05, 2024
  */
 class RegistrationTest extends TestCase
@@ -21,8 +22,6 @@ class RegistrationTest extends TestCase
      * Test that the registration screen can be rendered.
      *
      * This method simulates a request to the registration page and asserts that it returns a 200 status, indicating the page is displayed correctly.
-     *
-     * @return void
      */
     #[Test]
     public function registration_screen_can_be_rendered(): void
@@ -38,8 +37,6 @@ class RegistrationTest extends TestCase
      * Test that new users can register.
      *
      * This method uses Faker to create a fake name and email, and simulates a registration request. It asserts that the user is authenticated and redirected to the dashboard upon successful registration.
-     *
-     * @return void
      */
     #[Test]
     public function new_users_can_register(): void

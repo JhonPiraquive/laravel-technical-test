@@ -14,6 +14,7 @@ use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
  * from the `.env.testing` file for testing purposes.
  *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
+ *
  * @version October 05, 2024
  */
 abstract class TestCase extends BaseTestCase
@@ -25,8 +26,6 @@ abstract class TestCase extends BaseTestCase
      *
      * This method is called before each test. It loads the environment variables from
      * the `.env.testing` file if it exists, runs database migrations, and seeds the database.
-     *
-     * @return void
      */
     protected function setUp(): void
     {

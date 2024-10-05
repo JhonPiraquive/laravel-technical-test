@@ -15,14 +15,13 @@ use Illuminate\View\View;
  * view and to handle the sending of password reset links to users.
  *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
+ *
  * @version October 04, 2024
  */
 class ForgotPasswordController extends Controller
 {
     /**
      * Display the password reset link request view.
-     *
-     * @return View
      */
     public function index(): View
     {
@@ -32,9 +31,10 @@ class ForgotPasswordController extends Controller
     /**
      * Handle an incoming password reset link request.
      *
-     * @param SendLinkRequest $request The request containing the email address.
-     * @throws \Illuminate\Validation\ValidationException
+     * @param  SendLinkRequest  $request  The request containing the email address.
      * @return RedirectResponse Redirects the user back with a status or error message.
+     *
+     * @throws \Illuminate\Validation\ValidationException
      */
     public function sendLink(SendLinkRequest $request): RedirectResponse
     {

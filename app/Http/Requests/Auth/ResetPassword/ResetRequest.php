@@ -11,6 +11,7 @@ use Illuminate\Validation\Rules;
  * This class handles the validation rules for resetting a user's password.
  *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
+ *
  * @version October 05, 2024
  */
 class ResetRequest extends FormRequest

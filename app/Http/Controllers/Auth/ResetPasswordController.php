@@ -19,6 +19,7 @@ use Illuminate\View\View;
  * and handling the logic for resetting a user's password.
  *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
+ *
  * @version October 04, 2024
  */
 class ResetPasswordController extends Controller
@@ -26,8 +27,7 @@ class ResetPasswordController extends Controller
     /**
      * Display the password reset view.
      *
-     * @param Request $request The incoming request instance.
-     * @return View
+     * @param  Request  $request  The incoming request instance.
      */
     public function index(Request $request): View
     {
@@ -37,9 +37,10 @@ class ResetPasswordController extends Controller
     /**
      * Handle an incoming new password request.
      *
-     * @param ResetRequest $request The request containing the password reset data.
-     * @throws \Illuminate\Validation\ValidationException
+     * @param  ResetRequest  $request  The request containing the password reset data.
      * @return RedirectResponse Redirects the user to the login page or back with an error message.
+     *
+     * @throws \Illuminate\Validation\ValidationException
      */
     public function reset(ResetRequest $request): RedirectResponse
     {
@@ -64,6 +65,6 @@ class ResetPasswordController extends Controller
         return $status == Password::PASSWORD_RESET
             ? redirect()->route('login')->with('status', __($status))
             : back()->withInput($request->only('email'))
-            ->withErrors(['email' => __($status)]);
+                ->withErrors(['email' => __($status)]);
     }
 }

@@ -2,8 +2,8 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
 use PHPUnit\Framework\Attributes\Test;
+use Tests\TestCase;
 
 /**
  * Class DatabaseTest
@@ -12,14 +12,13 @@ use PHPUnit\Framework\Attributes\Test;
  * It ensures that the application is running in the testing environment during test execution.
  *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
+ *
  * @version October 05, 2024
  */
 class DatabaseTest extends TestCase
 {
     /**
      * Verifies that the application environment is set to 'testing'.
-     *
-     * @return void
      */
     #[Test]
     public function it_is_testing_environment(): void

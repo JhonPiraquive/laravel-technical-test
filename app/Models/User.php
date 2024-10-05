@@ -13,6 +13,7 @@ use Illuminate\Notifications\Notifiable;
  * This class represents a user, including authentication and notification functionalities.
  *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
+ *
  * @version October 05, 2024
  */
 class User extends Authenticatable

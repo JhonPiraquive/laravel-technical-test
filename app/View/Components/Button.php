@@ -12,6 +12,7 @@ use Illuminate\View\Component;
  * This component renders a customizable button based on the specified type.
  *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
+ *
  * @version October 05, 2024
  */
 class Button extends Component
@@ -21,7 +22,7 @@ class Button extends Component
     /**
      * Create a new component instance.
      *
-     * @param string|null $type The type of button (e.g., primary, secondary, danger, etc.)
+     * @param  string|null  $type  The type of button (e.g., primary, secondary, danger, etc.)
      */
     public function __construct($type = null)
     {
@@ -30,8 +31,6 @@ class Button extends Component
 
     /**
      * Get the view / contents that represent the component.
-     *
-     * @return View|Closure|string
      */
     public function render(): View|Closure|string
     {
@@ -41,7 +40,7 @@ class Button extends Component
     /**
      * Get the CSS classes for the button based on its type.
      *
-     * @param string|null $type The type of button.
+     * @param  string|null  $type  The type of button.
      * @return string The CSS classes for the button.
      */
     public function getButtonClass($type = null): string

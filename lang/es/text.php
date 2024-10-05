@@ -21,36 +21,36 @@ return [
         'new_password' => 'Nueva contraseña',
         'phone' => 'Teléfono',
         'address' => 'Dirección',
-        'no_data' => 'No hay información'
+        'no_data' => 'No hay información',
     ],
     'customer' => [
         'buttons' => [
             'delete' => 'Eliminar',
-            'save' => 'Guardar'
+            'save' => 'Guardar',
         ],
         'content' => [
             'update_title' => 'Actualizar Cliente',
             'delete' => 'Recuerda que al eliminar este registro no podras recuperarlo.',
-            'store_title' => 'Crear Cliente'
+            'store_title' => 'Crear Cliente',
         ],
         'title' => 'Clientes',
         'table' => [
-            'options' => 'Opciones'
-        ]
+            'options' => 'Opciones',
+        ],
     ],
     'dashboard' => [
         'title' => 'Panel de control',
         'content' => [
-            'welcome' => 'Bienvenido!'
-        ]
+            'welcome' => 'Bienvenido!',
+        ],
     ],
     'forgot_password' => [
         'buttons' => [
-            'forgot' => 'Enviar enlace'
+            'forgot' => 'Enviar enlace',
         ],
         'content' => [
-            'text1' => '¿Olvidaste tu contraseña? No hay problema. Simplemente déjanos saber tu dirección de correo electrónico y te enviaremos un enlace para restablecer tu contraseña, donde podrás elegir una nueva.'
-        ]
+            'text1' => '¿Olvidaste tu contraseña? No hay problema. Simplemente déjanos saber tu dirección de correo electrónico y te enviaremos un enlace para restablecer tu contraseña, donde podrás elegir una nueva.',
+        ],
     ],
     'login' => [
         'buttons' => [
@@ -62,17 +62,17 @@ return [
         ],
         'links' => [
             'forgot_password' => '¿Olvidaste tu contraseña?',
-            'register' => '¿Nuevo Usuario?'
-        ]
+            'register' => '¿Nuevo Usuario?',
+        ],
     ],
     'navigation' => [
         'buttons' => [
-            'logout' => 'Salir'
-        ]
+            'logout' => 'Salir',
+        ],
     ],
     'user' => [
         'buttons' => [
-            'save' => 'Guardar'
+            'save' => 'Guardar',
         ],
         'content' => [
             'information' => 'Información del Perfil',
@@ -81,7 +81,7 @@ return [
             'update_password' => 'Actualizar Contraseña',
         ],
         'response' => [
-            'save' => 'Guardado'
+            'save' => 'Guardado',
         ],
         'title' => 'Perfil',
     ],
@@ -90,12 +90,12 @@ return [
             'register' => 'Registrarse',
         ],
         'links' => [
-            'already_registered' => '¿Ya estás registrado?'
-        ]
+            'already_registered' => '¿Ya estás registrado?',
+        ],
     ],
     'reset_password' => [
         'buttons' => [
-            'reset' => 'Restablecer contraseña'
-        ]
-    ]
+            'reset' => 'Restablecer contraseña',
+        ],
+    ],
 ];

@@ -11,6 +11,7 @@ use Illuminate\View\View;
  * This component renders the main application layout.
  *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
+ *
  * @version October 05, 2024
  */
 class AppLayout extends Component

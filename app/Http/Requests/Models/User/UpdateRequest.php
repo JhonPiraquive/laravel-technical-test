@@ -12,6 +12,7 @@ use Illuminate\Validation\Rule;
  * This class handles the validation rules for updating a user's information.
  *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
+ *
  * @version October 05, 2024
  */
 class UpdateRequest extends FormRequest

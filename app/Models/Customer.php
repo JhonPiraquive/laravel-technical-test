@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * This class represents a customer and their associated data in the application.
  *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
+ *
  * @version October 05, 2024
  */
 class Customer extends Model
