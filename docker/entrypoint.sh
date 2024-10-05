@@ -6,6 +6,8 @@ if [ ! -f /var/www/composer-installed ]; then
     composer install --optimize-autoloader --no-interaction --no-progress
     php artisan key:generate
     php artisan migrate --seed
+    npm install
+    npm run build
 else
     echo "Composer dependencies already installed."
 fi
