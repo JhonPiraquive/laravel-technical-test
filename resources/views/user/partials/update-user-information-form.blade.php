@@ -1,15 +1,15 @@
 <section>
     <header>
         <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
-            {{ __('text.profile.content.information') }}
+            {{ __('text.user.content.information') }}
         </h2>
 
         <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-            {{ __("text.profile.content.text") }}
+            {{ __("text.user.content.text") }}
         </p>
     </header>
 
-    <form method="post" action="{{ route('profile.update') }}" class="mt-6 space-y-6">
+    <form method="post" action="{{ route('user.update') }}" class="mt-6 space-y-6">
         @csrf
         @method('patch')
 
@@ -26,16 +26,16 @@
         </div>
 
         <div class="flex items-center gap-4">
-            <x-button :type='"primary"'>{{ __('text.profile.buttons.save') }}</x-button>
+            <x-button :type='"primary"'>{{ __('text.user.buttons.save') }}</x-button>
 
-            @if (session('status') === 'profile-updated')
+            @if (session('status') === 'user-updated')
                 <p
                     x-data="{ show: true }"
                     x-show="show"
                     x-transition
                     x-init="setTimeout(() => show = false, 2000)"
                     class="text-sm text-gray-600 dark:text-gray-400"
-                >{{ __('text.profile.response.save') }}</p>
+                >{{ __('text.user.response.save') }}</p>
             @endif
         </div>
     </form>
