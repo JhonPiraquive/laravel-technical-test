@@ -1,71 +1,48 @@
-## Table of Contents
-- [Table of Contents](#table-of-contents)
-- [General Info](#general-info)
-- [Technologies](#technologies)
-- [Installation](#installation)
-    - [Pre-requisites](#pre-requisites)
-    - [Steps](#steps)
-- [Maintainer](#maintainer)
+# Laravel Technical Test
 
-## General Info
+## Description
 This is a technical test software designed to evaluate my skills as a senior developer.
 
-- Laravel Breeze is used for auth.
-- Default user is test@example.com and password is 12345678
+## Prerequisites
+- [Docker](https://www.docker.com/get-started) installed on your machine.
+- [Docker Compose](https://docs.docker.com/compose/install/) installed on your machine.
+- [Linux or WSL](https://learn.microsoft.com/en-us/windows/wsl/install) installed on your machine.
+- [Git](https://git-scm.com/) installed on your machine.
 
-## Technologies
-A list of technologies used within the project:
-* [Laravel](https://laravel.com): Version 11
-* [Composer](https://getcomposer.org): Version 2.8.0
-* [Nginx](https://www.nginx.com): Version 1.24.0
-* [PHP](https://www.php.net): Version 8.3
-* [Docker](https://www.docker.com): Version 24.0.6
-* [Docker Compose](https://docs.docker.com/compose/): Version 2.21.0-desktop.1
-* [Node JS](https://nodejs.org/en): Version 20.17.0
-* [npm](https://docs.npmjs.com/cli/v10/commands/npm-install): Version 10.8.2
+## Getting Started
 
-## Installation
-Step by step instructions on how to run this application.
+### Cloning the Repository, Initializing Docker Containers, and Setup (Step by Step)
 
-### Pre-requisites
-***
-- Docker
-- Docker Compose
-- Linux Operating System (or Windows with WSL 2 and Ubuntu)
-- Git
+To clone the repository, run the following command in your terminal:
 
-### Steps
-***
 ```bash
 $ git clone https://github.com/JhonPiraquive/laravel-technical-test.git
+```
+
+Navigate to the project directory and run the following command to build and start the Docker containers:
+
+```bash
 $ cd laravel-technical-test
 ```
 
-<p>
-    Add your custom values to ROOT_PASSWORD, USERNAME, and PASSWORD variables
-</p>
-
-```bash
+Add your custom values to ROOT_PASSWORD, USERNAME, and PASSWORD variables (This will construct the database container)
+```
 $ ROOT_PASSWORD= USERNAME= PASSWORD= docker-compose -p app_database -f db-docker-compose.yml up -d --build --remove-orphans
+```
+
+Create the .env file
+```
 $ cp .env.example .env
 ```
 
-<p>
-    Replace the following variables in the .env file
-</p>
-
+Replace the following variables in the .env file
 ```
-    DB_DATABASE=The database name you set
-    DB_USERNAME=The database username you set
-    DB_PASSWORD=The password you set
+DB_DATABASE=The database name you set
+DB_USERNAME=The database username you set
+DB_PASSWORD=The password you set
 ```
 
-<p>
-    Also if you want to receive emails configure the following variables (Make sure you have a mailersend account) By default the emails are stored in the laravel.log file, if mailersend is a free trial it will take some time so feel free to use the laravel.log file
-</p>
-
-[Create a Mailersend account](https://www.mailersend.com/)
-
+If you want to receive emails configure the following variables (Make sure you have a mailersend account) By default the emails are stored in the laravel.log file, if mailersend is a free trial it will take some time so feel free to use the laravel.log file [Create a Mailersend account](https://www.mailersend.com)
 ```
 MAIL_MAILER=smtp
 MAIL_HOST=smtp.mailersend.net
@@ -77,20 +54,46 @@ MAIL_FROM_ADDRESS="info@yourtrialdomain"
 MAIL_FROM_NAME="${APP_NAME}"
 ```
 
-```bash
-$ docker-compose -p app_server up -d --build --remove-orphans
-$ Wait a couple of seconds and go to http://localhost
+This will construct the nginx and php container
+```
+docker-compose -p app_server up -d --build --remove-orphans
 ```
 
-# Considerations
+Wait a couple of seconds and go to http://localhost
 
-You can execute the tests with
+### Executing Migrations and Seeders
+The containers will create this for you, just relax and wait! 😀
+
+### Accessing the Database
+To access the database, you can use a database management tool phpMyAdmin through http://localhost:8080
+
+### Running Tests
+
+You can execute the unit tests using the following commands:
 
 ```bash
+$ docker exec -it app_php bash
 $ php artisan config:cache
 $ composer dump-autoload
 $ php artisan test
 ```
 
-# Maintainer
-Jhon Alejandro Piraquive Ramirez
+## License
+
+MIT License
+
+Copyright (c) 2024 Alejandro Piraquive
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## Contributing
+Provide guidelines for contributing to your project.
+
+## Contact
+For any questions or suggestions, feel free to contact:
+
+Alejandro Piraquive alejandro5.6@icloud.com
