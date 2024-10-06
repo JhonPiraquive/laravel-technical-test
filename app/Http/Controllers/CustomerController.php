@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Models;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Models\Customer\StoreRequest;
-use App\Http\Requests\Models\Customer\UpdateRequest;
+use App\Http\Requests\Customer\StoreRequest;
+use App\Http\Requests\Customer\UpdateRequest;
 use App\Models\Customer;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;

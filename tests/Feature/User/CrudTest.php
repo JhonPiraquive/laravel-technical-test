@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature\Models;
+namespace Tests\Feature\User;
 
 use App\Models\User;
 use Faker\Factory as Faker;

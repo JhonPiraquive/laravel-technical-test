@@ -1,19 +1,19 @@
 <?php
 
-namespace App\Http\Requests\Models\Customer;
+namespace App\Http\Requests\Customer;
 
 use Illuminate\Foundation\Http\FormRequest;
 
 /**
- * Customer store request validator
+ * Customer update request validator
  *
- * This class handles the validation rules for storing customer data.
+ * This class handles the validation rules for updating customer data.
  *
  * @author Alejandro Piraquive <alejandro5.6@icloud.com>
  *
  * @version October 05, 2024
  */
-class StoreRequest extends FormRequest
+class UpdateRequest extends FormRequest
 {
     /**
      * Get the validation rules that apply to the request.
