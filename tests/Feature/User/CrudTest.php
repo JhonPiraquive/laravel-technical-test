@@ -8,7 +8,7 @@ use PHPUnit\Framework\Attributes\Test;
 use Tests\TestCase;
 
 /**
- * Class UserTest
+ * Class CrudTest
  *
  * This class contains feature tests related to the user page and its functionality.
  * It checks that the user page can be displayed, the user's information can be updated,
@@ -18,7 +18,7 @@ use Tests\TestCase;
  *
  * @version October 05, 2024
  */
-class UserTest extends TestCase
+class CrudTest extends TestCase
 {
     const PATH_USER = '/user';
 

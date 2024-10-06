@@ -9,7 +9,7 @@ use PHPUnit\Framework\Attributes\Test;
 use Tests\TestCase;
 
 /**
- * Class CustomerTest
+ * Class CrudTest
  *
  * This class contains feature tests for managing customers, including displaying customer pages,
  * creating, updating, viewing, and deleting customers.
@@ -18,7 +18,7 @@ use Tests\TestCase;
  *
  * @version October 05, 2024
  */
-class CustomerTest extends TestCase
+class CrudTest extends TestCase
 {
     /**
      * Test that the customer index page is displayed successfully.
